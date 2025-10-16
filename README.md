@@ -16,6 +16,13 @@ Saathi lets users chat with an intelligent AI assistant in realtime, providing f
 
 🔒 Seamless two-way socket connection between client & serverThis is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+🏗️ Tech Stack
+
+Layer	    Technology
+Frontend	Next.js, React, Tailwind CSS
+Realtime	Socket.io (Node.js server)
+AI Model	OpenAI GPT API
+
 ## Getting Started
 
 First, run the development server:
