@@ -23,6 +23,7 @@ Frontend	Next.js, React, Tailwind CSS
 Realtime	Socket.io (Node.js server)
 AI Model	OpenAI GPT API
 
+
 ## Getting Started
 
 First, run the development server:
