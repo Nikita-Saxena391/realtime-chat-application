@@ -2,26 +2,76 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* WhatsApp-like top header */
+.whatsapp-header {
+  background-color: #075E54; /* WhatsApp green */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem; /* taller header */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.whatsapp-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  flex-shrink: 0;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.whatsapp-header .title {
+  margin-left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsapp-header .title .name {
+font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.whatsapp-header .title .status {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+  font-weight: 900;
+}
+
+.whatsapp-header .actions {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Full chat background */
+body, #__next, .flex-1 {
+  background-image: url("/whatsapp.jpg"); /* make sure file is in /public */
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: top;
+}
+
+/* Input box */
+.chat-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.chat-button {
+  background-color: #075E54;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-button:hover {
+  background-color: #064d47;
 }
